@@ -24,7 +24,7 @@
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 13px;
+  gap: 15px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -132,8 +132,8 @@
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
-  color: var(--accent-color, #FF0070);
-  text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
+  color: var(--title-color, #DB00FF);
+  text-shadow: 2px 2px 0 var(--footer-title-shadow-color, #FF0070);
 }
 
 .title-decor {
@@ -247,7 +247,7 @@
 .gallery {
   display: grid;
   gap: 10px;
-  margin-block-start: 10px;
+  margin-block-start: 5px;
 }
 
 .gallery__image {

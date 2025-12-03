@@ -9,6 +9,7 @@
   --button-hover-border-color: #000000;
   --decorated-zone-color: #000000;
   --section-title-color: #000000;
+  --footer-title-shadow-color: #FF8DCB;
 }
 
 .theme-light .header__rec {
@@ -26,6 +27,7 @@
     --button-hover-border-color: #000000;
     --decorated-zone-color: #000000;
     --section-title-color: #000000;
+    --footer-title-shadow-color: #FF8DCB;
   }
 
   .header__rec {
