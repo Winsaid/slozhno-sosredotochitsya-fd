@@ -263,7 +263,7 @@
 
 @media (width >= 768px) {
   .header {
-    margin-block-end: 40px;
+    margin-block-end: 50px;
   }
 
   .title {
@@ -307,11 +307,11 @@
     grid-template-columns: 236px 1fr;
     gap: 20px;
     align-items: start;
-    margin-block-end: 60px;
+    margin-block-end: 70px;
   }
 
   .section:last-child {
-    margin-block-end: 50px;
+    margin-block-end: 80px;
   }
 
   .section__title {
