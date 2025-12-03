@@ -24,7 +24,7 @@
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 17px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -154,6 +154,10 @@
   padding-inline-end: 10px;
   padding-block: 0;
   margin-block-end: 50px;
+}
+
+.section:last-child {
+  margin-block-end: 40px;
 }
 
 .section__title {
