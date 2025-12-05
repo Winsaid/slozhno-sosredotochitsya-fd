@@ -318,6 +318,10 @@
     margin-block-end: 0;
   }
 
+  .card__title.title-decor {
+    padding-inline-end: 0;
+  }
+
   .section .card {
     grid-column: 2;
   }
