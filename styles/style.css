@@ -307,7 +307,7 @@
     grid-template-columns: 236px 1fr;
     gap: 20px;
     align-items: start;
-    margin-block-end: 60px;
+    margin-block-end: 70px;
   }
 
   .section:last-child {
