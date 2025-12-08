@@ -9,4 +9,5 @@
   --decorated-zone-color: #FF0070;
   --section-title-color: #FF0070;
   --footer-title-shadow-color: #FF0070;
+  --logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }

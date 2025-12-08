@@ -12,13 +12,19 @@
   block-size: 100vh;
   min-block-size: 668px;
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 77px 1fr auto;
+  padding: 10px;
   margin-block-end: 40px;
 }
 
 .header__theme-menu {
-  position: absolute;
-  inset-block-start: 77px;
-  inset-inline-end: 10px;
+  grid-row: 1;
+  grid-column: 1;
+  justify-self: end;
+  align-self: start;
+  margin-block-start: 67px;
+  margin-inline-end: 10px;
 }
 
 .header__theme-menu-list {
@@ -107,12 +113,15 @@
 }
 
 .title {
-  position: absolute;
-  inset-block-start: 238px;
-  inset-inline-start: 10px;
+  grid-row: 2;
+  grid-column: 1;
+  justify-self: start;
+  align-self: start;
+  margin-block-start: 151px;
+  margin-inline-start: 0;
   font-family: 'IBM Plex mono', monospace;
   font-weight: 700;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: var(--logo-size, clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem));
   line-height: 83%;
   color: var(--title-color, #DB00FF);
   text-shadow: 4px 4px 0 var(--accent-color);
@@ -130,17 +139,13 @@
 .footer__title {
   font-family: 'IBM Plex mono', monospace;
   font-weight: 700;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: var(--logo-size, clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem));
   line-height: 83%;
   color: var(--title-color, #DB00FF);
   text-shadow: 2px 2px 0 var(--footer-title-shadow-color, #FF0070);
 }
 
 .title-decor {
-  position: absolute;
-  inset-block-start: 485px;
-  inset-inline-start: 10px;
-  inset-inline-end: 10px;
   font-family: 'IBM Plex mono', monospace;
   font-weight: 700;
   font-size: 18px;
@@ -148,6 +153,20 @@
   background-color: var(--accent-color, #FF0070);
   color: var(--title-decor-color, #000028);
   padding-inline-end: 20px;
+}
+
+.header .title-decor {
+  grid-row: 2;
+  grid-column: 1;
+  justify-self: start;
+  align-self: start;
+  margin-block-start: 398px;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+.title-decor p {
+  margin: 0;
 }
 
 .section {
@@ -174,7 +193,7 @@
   margin-block-start: 20px;
 }
 
-.card:first-of-type {
+.card:first-child {
   margin-block-start: 0;
 }
 
@@ -220,7 +239,7 @@
   margin-block-start: 20px;
 }
 
-.card__list-item:first-of-type {
+.card__list-item:first-child {
   margin-block-start: 0;
 }
 
@@ -253,6 +272,9 @@
   display: grid;
   gap: 10px;
   margin-block-start: 5px;
+  list-style: none;
+  margin-inline: 0;
+  padding: 0;
 }
 
 .gallery__image {
@@ -262,22 +284,22 @@
 }
 
 @media (width >= 768px) {
+  :root {
+    --logo-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
   .header {
     margin-block-end: 60px;
+    grid-template-rows: 192px 1fr auto;
   }
 
   .title {
-    inset-block-start: 463px;
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-block-start: 251px;
   }
 
-  .footer__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-
-  .title-decor {
-    inset-block-start: 724px;
-    inset-inline-start: 384px;
+  .header .title-decor {
+    margin-block-start: 512px;
+    margin-inline-start: 364px;
   }
 
   .header__rec {
@@ -286,8 +308,8 @@
   }
 
   .header__theme-menu {
-    inset-block-start: 192px;
-    inset-inline-end: 20px;
+    margin-block-start: 192px;
+    margin-inline-end: 20px;
   }
 
   .decorated-zone::before {
@@ -322,15 +344,16 @@
     padding-inline-end: 0;
   }
 
-  .section .card {
+  .section_articles .card,
+  .section_cards .card {
     grid-column: 2;
   }
 
-  .section:nth-of-type(2) .section__title {
+  .section_cards .section__title {
     grid-column: 1;
   }
 
-  .section:nth-of-type(2) .card {
+  .section_cards .card {
     grid-column: 1 / -1;
   }
 
@@ -338,16 +361,16 @@
     margin-block-start: 0;
   }
 
-  .section:nth-of-type(4) {
+  .section_gallery {
     grid-template-columns: 1fr;
   }
 
-  .section:nth-of-type(4) .card__title,
-  .section:nth-of-type(4) .section__title {
+  .section_gallery .card__title,
+  .section_gallery .section__title {
     grid-column: 1;
   }
 
-  .section:nth-of-type(4) .gallery {
+  .section_gallery .gallery {
     grid-column: 1;
   }
 
@@ -362,48 +385,53 @@
     min-block-size: 192px;
   }
 
-  .gallery__image:first-of-type {
+  .gallery li:first-of-type {
     grid-column: 1 / 3;
     grid-row: 1;
   }
 
-  .gallery__image:nth-of-type(2) {
+  .gallery li:nth-of-type(2) {
     grid-column: 3;
     grid-row: 1 / 3;
   }
 
-  .gallery__image:nth-of-type(3) {
+  .gallery li:nth-of-type(3) {
     grid-column: 1;
     grid-row: 2 / 4;
   }
 
-  .gallery__image:nth-of-type(4) {
+  .gallery li:nth-of-type(4) {
     grid-column: 2;
     grid-row: 2;
   }
 
-  .gallery__image:nth-of-type(5) {
+  .gallery li:nth-of-type(5) {
     grid-column: 2 / 4;
     grid-row: 3;
   }
 }
 
 @media (width >= 1024px) {
-  .title {
-    font-size: 9.8125rem;
-    inset-block-start: 319px;
+  .header {
+    grid-template-rows: 22px 1fr auto;
   }
 
-  .title-decor {
-    inset-block-start: 563px;
-    inset-inline-start: 513px;
-    inset-inline-end: 20px;
+  .title {
+    font-size: var(--logo-size);
+    margin-block-start: 277px;
+  }
+
+  .header .title-decor {
+    margin-block-start: 521px;
+    margin-inline-start: 493px;
+    margin-inline-end: 0;
     padding-inline-end: 0;
   }
 
   .header__theme-menu {
-    inset-block-start: 22px;
-    inset-inline-start: 397px;
+    justify-self: start;
+    margin-block-start: 22px;
+    margin-inline-start: 397px;
   }
 
   .header__theme-menu-list {
@@ -411,46 +439,30 @@
     gap: 8px;
   }
 
-  .section:nth-of-type(1),
-  .section:nth-of-type(3) {
+  .section_articles {
     grid-template-columns: 1fr 2fr;
   }
 
-  .section:nth-of-type(1) {
+  .section_articles:first-child {
     gap: 20px 5px;
   }
 
-  .section:nth-of-type(1) .section__title {
+  .section_articles .section__title {
     grid-column: 1;
   }
 
-  .section:nth-of-type(1) .card {
+  .section_articles .card {
     grid-column: 2;
   }
 
-  .section:nth-of-type(2) {
+  .section_cards {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
   }
 
-  .section:nth-of-type(2) .section__title {
+  .section_cards .section__title {
     grid-row: 1;
     grid-column: 1;
-  }
-
-  .section:nth-of-type(2) .card:nth-of-type(1) {
-    grid-row: 2;
-    grid-column: 1;
-  }
-
-  .section:nth-of-type(2) .card:nth-of-type(2) {
-    grid-row: 2;
-    grid-column: 2;
-  }
-
-  .section:nth-of-type(2) .card:nth-of-type(3) {
-    grid-row: 2;
-    grid-column: 3;
   }
 
   .footer__title {
