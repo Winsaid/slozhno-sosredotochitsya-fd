@@ -24,7 +24,6 @@
   justify-self: end;
   align-self: start;
   margin-block-start: 67px;
-  margin-inline-end: 10px;
 }
 
 .header__theme-menu-list {
@@ -270,8 +269,8 @@
 
 .gallery {
   display: grid;
-  gap: 10px;
-  margin-block-start: 5px;
+  gap: 5px;
+  margin-block-start: 10px;
   list-style: none;
   margin-inline: 0;
   padding: 0;
@@ -294,11 +293,11 @@
   }
 
   .title {
-    margin-block-start: 251px;
+    margin-block-start: 256px;
   }
 
   .header .title-decor {
-    margin-block-start: 512px;
+    margin-block-start: 517px;
     margin-inline-start: 364px;
   }
 
@@ -309,7 +308,6 @@
 
   .header__theme-menu {
     margin-block-start: 192px;
-    margin-inline-end: 20px;
   }
 
   .decorated-zone::before {
@@ -418,11 +416,11 @@
 
   .title {
     font-size: var(--logo-size);
-    margin-block-start: 277px;
+    margin-block-start: 282px;
   }
 
   .header .title-decor {
-    margin-block-start: 521px;
+    margin-block-start: 526px;
     margin-inline-start: 493px;
     margin-inline-end: 0;
     padding-inline-end: 0;
@@ -457,12 +455,17 @@
 
   .section_cards {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
   }
 
   .section_cards .section__title {
     grid-row: 1;
-    grid-column: 1;
+    grid-column: 1 / -1;
+  }
+
+  .section_cards .card {
+    grid-row: 2;
+    grid-column: auto;
   }
 
   .footer__title {
