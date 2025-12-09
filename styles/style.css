@@ -301,6 +301,7 @@
   .header .title-decor {
     margin-block-start: 512px;
     margin-inline-start: 360px;
+    margin-inline-end: 10px;
   }
 
   .header__rec {
@@ -309,7 +310,7 @@
   }
 
   .header__theme-menu {
-    margin-block-start: 187px;
+    margin-block-start: 184px;
   }
 
   .decorated-zone::before {
@@ -333,7 +334,7 @@
   }
 
   .section:last-child {
-    margin-block-end: 60px;
+    margin-block-end: 57px;
   }
 
   .section__title {
@@ -422,9 +423,8 @@
   }
 
   .header .title-decor {
-    margin-block-start: 526px;
-    margin-inline-start: 498px;
-    margin-inline-end: 0;
+    margin-block-start: 528px;
+    margin-inline-start: 503px;
     padding-inline-end: 0;
     max-width: 491px;
   }
@@ -432,7 +432,7 @@
   .header__theme-menu {
     justify-self: start;
     margin-block-start: 12px;
-    margin-inline-start: 387px;
+    margin-inline-start: 392px;
   }
 
   .header__theme-menu-list {
