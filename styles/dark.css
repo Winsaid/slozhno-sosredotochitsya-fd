@@ -5,8 +5,21 @@
   --text-color: #F1B2CE;
   --title-decor-color: #000028;
   --title-color: #DB00FF;
-  --button-hover-border-color: #FF0070;
+  --button-hover-border-color: #FF007066;
   --decorated-zone-color: #FF0070;
   --section-title-color: #FF0070;
   --footer-title-shadow-color: #FF0070;
+}
+
+.theme-dark .header__theme-menu-button:hover {
+  border-color: var(--button-hover-border-color, #FF007066);
+}
+
+.theme-dark .header__theme-menu-button:focus-visible {
+  outline: none;
+  border-block-end-color: var(--accent-color, #FF0070);
+}
+
+.theme-dark .header__theme-menu-button_active {
+  border-color: var(--accent-color, #FF0070);
 }

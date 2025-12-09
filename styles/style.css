@@ -50,11 +50,7 @@
 }
 
 .header__theme-menu-button:hover {
-  border-color: var(--button-hover-border-color, #FF0070);
-}
-
-.theme-light .header__theme-menu-button:hover {
-  border-color: var(--button-hover-border-color, #000000);
+  border-color: var(--button-hover-border-color, #FF007066);
 }
 
 .header__theme-menu-button:focus-visible {
@@ -119,7 +115,7 @@
   justify-self: start;
   align-self: start;
   margin-block-start: 151px;
-  margin-inline-start: calc((100vw - min(100vw, 1440px)) / 2 - 10px);
+  margin-inline-start: 10px;
   font-family: 'IBM Plex mono', monospace;
   font-weight: 700;
   font-size: var(--logo-size, clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem));
@@ -162,7 +158,7 @@
   justify-self: start;
   align-self: start;
   margin-block-start: 398px;
-  margin-inline-start: calc((100vw - min(100vw, 1440px)) / 2 - 10px);
+  margin-inline-start: 10px;
   margin-inline-end: 0;
 }
 
@@ -295,12 +291,13 @@
   }
 
   .title {
-    margin-block-start: 256px;
+    margin-block-start: 260px;
+    margin-inline-start: 0px;
   }
 
   .header .title-decor {
-    margin-block-start: 512px;
-    margin-inline-start: calc((100vw - min(100vw, 1440px)) / 2 - 20px + 360px);
+    margin-block-start: 521px;
+    margin-inline-start: 383px;
     margin-inline-end: 10px;
   }
 
@@ -310,7 +307,8 @@
   }
 
   .header__theme-menu {
-    margin-block-start: 184px;
+    margin-block-start: 185px;
+    margin-inline-end: 10px;
   }
 
   .decorated-zone::before {
@@ -420,19 +418,20 @@
   .title {
     font-size: var(--logo-size);
     margin-block-start: 284px;
+    margin-inline-start: 1px;
   }
 
   .header .title-decor {
-    margin-block-start: 528px;
-    margin-inline-start: calc((100vw - min(100vw, 1440px)) / 2 - 20px + 503px);
+    margin-block-start: 530px;
+    margin-inline-start: 515px;
     padding-inline-end: 0;
     max-width: 491px;
   }
 
   .header__theme-menu {
     justify-self: start;
-    margin-block-start: 12px;
-    margin-inline-start: 392px;
+    margin-block-start: 11px;
+    margin-inline-start: 399px;
   }
 
   .header__theme-menu-list {

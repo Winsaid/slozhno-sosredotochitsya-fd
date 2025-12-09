@@ -6,11 +6,11 @@
   --text-color: #000000;
   --title-decor-color: #000000;
   --title-color: #FFC2E6;
-  --button-hover-border-color: #000000;
+  --button-hover-border-color: #32312D66;
   --decorated-zone-color: #000000;
   --section-title-color: #000000;
   --footer-title-shadow-color: #FF8DCB;
-  --button-text-color: #000000;
+  --button-text-color: #353430;
 }
 
 .theme-light .header__rec {
@@ -25,11 +25,11 @@
     --text-color: #000000;
     --title-decor-color: #000000;
     --title-color: #FFC2E6;
-    --button-hover-border-color: #000000;
+    --button-hover-border-color: #32312D66;
     --decorated-zone-color: #000000;
     --section-title-color: #000000;
     --footer-title-shadow-color: #FF8DCB;
-    --button-text-color: #000000;
+    --button-text-color: #353430;
   }
 
   .header__rec {
@@ -38,39 +38,39 @@
 }
 
 .theme-light .header__theme-menu-button {
-  color: var(--button-text-color, #000000);
+  color: var(--button-text-color, #353430);
   border: 1px solid transparent;
 }
 
 .theme-light .header__theme-menu-button:hover {
-  border-color: transparent;
+  border-color: var(--button-hover-border-color, #32312D66);
 }
 
 .theme-light .header__theme-menu-button:focus-visible {
   outline: none;
-  border-block-end-color: var(--button-text-color, #000000);
+  border-block-end-color: var(--button-text-color, #353430);
 }
 
 .theme-light .header__theme-menu-button_active {
-  border: 1px solid var(--button-text-color, #000000);
+  border: 1px solid var(--button-text-color, #353430);
 }
 
 @media (prefers-color-scheme: light) {
   .header__theme-menu-button {
-    color: var(--button-text-color, #000000);
+    color: var(--button-text-color, #353430);
     border: 1px solid transparent;
   }
 
   .header__theme-menu-button:hover {
-    border-color: transparent;
+    border-color: var(--button-hover-border-color, #32312D66);
   }
 
   .header__theme-menu-button:focus-visible {
     outline: none;
-    border-block-end-color: var(--button-text-color, #000000);
+    border-block-end-color: var(--button-text-color, #353430);
   }
 
   .header__theme-menu-button_active {
-    border: 1px solid var(--button-text-color, #000000);
+    border: 1px solid var(--button-text-color, #353430);
   }
 }
