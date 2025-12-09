@@ -374,7 +374,7 @@
 
   .gallery {
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 15px;
     margin-block-start: 0;
   }
 
@@ -416,20 +416,21 @@
 
   .title {
     font-size: var(--logo-size);
-    margin-block-start: 282px;
+    margin-block-start: 284px;
   }
 
   .header .title-decor {
     margin-block-start: 526px;
-    margin-inline-start: 493px;
+    margin-inline-start: 498px;
     margin-inline-end: 0;
     padding-inline-end: 0;
+    max-width: 491px;
   }
 
   .header__theme-menu {
     justify-self: start;
-    margin-block-start: 22px;
-    margin-inline-start: 397px;
+    margin-block-start: 12px;
+    margin-inline-start: 387px;
   }
 
   .header__theme-menu-list {
@@ -461,6 +462,7 @@
   .section_cards .section__title {
     grid-row: 1;
     grid-column: 1 / -1;
+    max-width: 315px;
   }
 
   .section_cards .card {
