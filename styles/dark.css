@@ -11,6 +11,11 @@
   --footer-title-shadow-color: #FF0070;
 }
 
+.theme-dark .header__theme-menu-button {
+  color: var(--accent-color, #FF0070);
+  border: 1px solid transparent;
+}
+
 .theme-dark .header__theme-menu-button:hover {
   border-color: var(--button-hover-border-color, #FF007066);
 }
@@ -22,4 +27,32 @@
 
 .theme-dark .header__theme-menu-button_active {
   border-color: var(--accent-color, #FF0070);
+}
+
+.theme-dark .section__title {
+  font-weight: 700;
+}
+
+@media (prefers-color-scheme: light) {
+  .theme-dark .header__rec {
+    display: block;
+  }
+
+  .theme-dark .header__theme-menu-button {
+    color: var(--accent-color, #FF0070);
+    border: 1px solid transparent;
+  }
+
+  .theme-dark .header__theme-menu-button:hover {
+    border-color: var(--button-hover-border-color, #FF007066);
+  }
+
+  .theme-dark .header__theme-menu-button:focus-visible {
+    outline: none;
+    border-block-end-color: var(--accent-color, #FF0070);
+  }
+
+  .theme-dark .header__theme-menu-button_active {
+    border-color: var(--accent-color, #FF0070);
+  }
 }

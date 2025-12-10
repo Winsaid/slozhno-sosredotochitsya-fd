@@ -157,7 +157,7 @@
   grid-column: 1;
   justify-self: start;
   align-self: start;
-  margin-block-start: 398px;
+  margin-block-start: clamp(398px, 333px + 0.174vw, 456px);
   margin-inline-start: 10px;
   margin-inline-end: 0;
 }
